@@ -4,8 +4,12 @@
   "main": "index.js",
   "author": "Luísa Barros <qlullyq@gmail.com> (https://luisabfs.github.io/)",
   "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

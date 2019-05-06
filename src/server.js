@@ -1,4 +1,8 @@
+/* eslint-disable class-methods-use-this */
 const express = require('express');
+const mongoose = require('mongoose');
+
+const databaseConfig = require('./config/database');
 const routes = require('./routes');
 
 class App {
@@ -6,16 +10,24 @@ class App {
     this.express = express();
     this.isDev = process.env.NODE_ENV !== 'production';
 
-    this.middleware();
+    this.database();
+    this.middlewares();
     this.routes();
   }
 
+  database() {
+    mongoose.connect(databaseConfig.uri, {
+      useCreateIndex: true,
+      useNewUrlParser: true,
+    });
+  }
+
   middlewares() {
-    this.express.user(express.json());
+    this.express.use(express.json());
   }
 
   routes() {
-    this.express.user(routes);
+    this.express.use(routes);
   }
 }
 
