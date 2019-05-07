@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 const User = require('../models/User');
 
 class UserController {
@@ -5,7 +6,7 @@ class UserController {
     const { email } = req.body;
 
     if (await User.findOne({ email })) {
-      return res.status(400).json({ error: 'User already existes' });
+      return res.status(400).json({ error: 'User already exists' });
     }
 
     const user = await User.create(req.body);
