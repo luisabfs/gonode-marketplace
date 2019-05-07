@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 const User = require('../models/User');
 
 class UserController {
