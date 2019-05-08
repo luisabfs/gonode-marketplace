@@ -32,4 +32,6 @@ routes.post(
   handle(controllers.PurchaseController.store),
 );
 
+routes.get('/purchases', controllers.PurchaseController.show);
+
 module.exports = routes;
