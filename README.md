@@ -14,8 +14,9 @@
 * Routing with Express.js
 * Encryption with bcrypt.js
 * Session management with jsonwebtoken
+* Send e-mails with nodemailer
 * Object modeling with Mongoose
-* Pagination with mongoo-paginate
+* Pagination with mongoose-paginate
 * Validation with express-validation
 * MongoDB and Docker
 * MVC architecture
